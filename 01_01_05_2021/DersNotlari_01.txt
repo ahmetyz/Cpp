@@ -1,0 +1,116 @@
+/* Ilk Program */
+#include <stdio.h>
+
+void main()
+{
+	int kar;
+	if ((kar = getchar()) != '\n')
+		main();
+	putchar(kar);
+}
+
+
+----------------------------------------------------------------------------------
+C Dilinde 
+fonksiyon tip belirteci olmadan tanımlanabilir:
+foo()
+{
+	return 0;
+}
+
+Derleyici integer olarak kabul ediyor. C++ da bu sentaks hatasıdır.
+Dahasi, aşağıdaki kod hata vermeden çalışıyor:
+toplama(a, b, c);
+int main()
+{
+	return toplama(1,2,3);
+}
+
+toplama(a, b, c)
+{
+	return a + b + c;
+}
+
+Dahasi, aşağıdaki kodda fonksiyon belirteci yok ve linkleme hatasi, C++'da sentaks hatasi
+int main()
+{
+	return toplama(1,2,3);
+}
+C'de implicit function declaration var. Buldugunu kullnıyor gibi
+----------------------------------------------------------------------------------
+
+C dilinde aşağıdaki ifade undefined behavior C++' da sentaks hatası
+toplama(a, b, c)
+{
+	
+}
+
+C dilinde aşağıdaki ifade undefined behavior C++' da derleme hatası
+int toplama(a, b, c)
+{
+	
+}
+--------------------------------------------------------------------------------------
+C de aşağıdakiler iki ifade farklı anlamlarda kullanılır:
+void func();	/* Arguman sayisi veya tipi belli degil */
+void foo(void);	/* Arguman almiyor */
+
+
+C++ ta ikisi arasında anlam farkı yok.
+void func();	/* Arguman almiyor */
+void foo(void);	/* Arguman almiyor */
+--------------------------------------------------------------------------------------
+
+C99 dan önce bir statement tan sonra bir değişken tanımlanamıyordu
+Değişkenler her zaman bloğun başında tanımlanmalıydı.
+C++ ta bu mümkün ve C99 dan sonra mümkün oldu
+istenen yerde bir değişken tanımlamak mümkün.
+--------------------------------------------------------------------------------------
+
+C99 dan öncesinde aşağıdaki ifade hatalı
+for(int i = 0 ; ;)  
+C99 ve C++ ta ise hata değil.
+--------------------------------------------------------------------------------------
+
+C dilinde döngü değişkeni döngü içinde yeniden tanımlanabilir
+	for (int i = 0; ;) {
+		int i;
+	}
+C++ bu sentaks hatasıdır.
+--------------------------------------------------------------------------------------
+
+C dilinde boolean değişkenler için 
+_Bool tanımlanmıştır. Ancak programcılar genelede integer değişkenleri kullanmayı 
+tercih etmişlerdir.
+Yine C dilinde bool değişken tipi de tanımlanmıştır. Ancak dilin çekirdeğinde 
+tanımlanmış bir tip değildir. Dolayısıyla "Çakma" bool olarak nitelendirilir.
+Anca C++ dilinde bool değişken tipi dilin doğal değişken tiplerinden biridir.
+
+Ancak her iki dil içinde 
+bool x = 0; /* x = false */
+bool x = 1; /* x = true */
+x değerine 0'dan farklı atanan her negatif ya da pozitif değer için 
+x true olmaktadır. Hatta aşağıdaki durumda dahi 
+bool x = 0.1; /* x = true */
+--------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
