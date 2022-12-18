@@ -1,15 +1,3 @@
-/* Ilk Program */
-#include <stdio.h>
-
-void main()
-{
-	int kar;
-	if ((kar = getchar()) != '\n')
-		main();
-	putchar(kar);
-}
-
-
 ----------------------------------------------------------------------------------
 C Dilinde 
 fonksiyon tip belirteci olmadan tanımlanabilir:
